@@ -1,0 +1,215 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<!---
+<div class="jumbotron">
+    <h1></h1>
+    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Getting started</h2>
+        <p>
+            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
+            enables a clean separation of concerns and gives you full control over markup
+            for enjoyable, agile development.
+        </p>
+        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Get more libraries</h2>
+        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
+        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Web Hosting</h2>
+        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    </div>
+</div>
+     -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+* {
+  box-sizing: border-box;
+}
+
+        body {
+            background-color: #8dcfd9;
+            font-family: Helvetica, sans-serif;
+        }
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #FF9F55;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Full-width containers */
+  .container {
+  width: 100%;
+  padding-left: 70px;
+  padding-right: 25px;
+  }
+
+  /* Make sure that all arrows are pointing leftwards */
+  .container::before {
+  left: 60px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+  left: 15px;
+  }
+
+  /* Make all right containers behave like the left ones */
+  .right {
+  left: 0%;
+  }
+}
+    </style>
+</head>
+<body>
+
+    <div class="timeline">
+        <div class="container left">
+            <div class="content">
+                <h2>Cod.101</h2>
+                <p>JavaScript permite la programación de microcontroladores; el desarrollo de plataformas para el internet de las cosas, y aplicaciones móviles.</p>
+            </div>
+        </div>
+        <div class="container right">
+            <div class="content">
+                <h2>Cod.102</h2>
+                <p>
+                    PHP es un buen lenguaje para aprender a programar sin conocimientos. Te permite desarrollar fácilmente una lógica de programación de alto nivel. </p>
+            </div>
+        </div>
+        <div class="container left">
+            <div class="content">
+                <h2>Cod.103</h2>
+                <p> .NET es uno de los frameworks más demandados a nivel mundial, con un desempeño que lo transformó en una excelente plataforma para desarrollar aplicaciones. </p>
+</div>
+        <div class="container right">
+            <div class="content">
+                <h2>Cod.104</h2>
+                <p>Flutter es un kit de desarrollo (SDK), también llamado Framework para crear aplicaciones modernas, orientadas al móvil y a la web. Flutter nos proporciona, un alto rendimiento y fidelidad para crear aplicaciones para Android como para IOS.</p>
+            </div>
+        </div>
+        <div class="container left">
+            <div class="content">
+                <h2>Cod.105</h2>
+                <p>Sea cual sea tu lenguaje de programación favorito (PHP, Python, C++, Java, etc.), en algún momento debes administrar y extraer información de la base de datos del sistema, y es allí donde todos los lenguajes se integran con SQL para estas tareas. SQL no es un lenguaje más, es el lenguaje con el que completas tus conocimientos de programación.</p>
+            </div>
+        </div>
+        <div class="container right">
+            <div class="content">
+                <h2>Cod.106</h2>
+                <p>WordPress se ha convertido en la plataforma por excelencia para que las revistas digitales y páginas web puedan trabajar de manera eficaz, sencilla y óptima. Su aprendizaje va a facilitarte mucho al implementar soluciones rápidas y profesionales</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+
